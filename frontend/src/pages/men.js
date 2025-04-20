@@ -1,10 +1,11 @@
 import Navbar from "../components/navbar";
+import ProductSection from "../components/productSection";
 
 const Men = () => {
     return (
         <>
             <Navbar />
-            <h1>This is Men page</h1>
+            <ProductSection />
         </>
        
     )
