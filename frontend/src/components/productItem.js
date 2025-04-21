@@ -10,7 +10,7 @@ const SingleItem = ({title,price,imageurl}) => {
         <>
             <div className="product"> 
                 <img src={imageurl} alt="" />
-                <IconList />
+                <IconList title={title} price={price} imageurl={imageurl} />
             </div>
             <div className="tag bg-red">sale</div>
             <div className="title pt-4 pb-1">{truncateWords(title, 5)}</div>

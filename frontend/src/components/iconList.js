@@ -1,11 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import setCurrentProduct from '../actions/setCurrentProduct'
+import {useDispatch} from 'react-redux'
 
-const IconList = () => {
+
+
+const IconList = ({title,price,imageurl}) => {
+   const  dispatch = useDispatch()
+
+    const handleCurrentProduct = () => {
+        dispatch(setCurrentProduct({title,price,imageurl}))
+    }
+    
   return (
     <>
         <ul className="d-flex align-items-center justify-content-center list-unstyled icons">
-            <Link onClick={()=>alert("Hi, I am detail page")}>
+            <Link onClick={handleCurrentProduct } to={{pathname:'/details'}}>
                 <li className="icon"><span className="fas fa-expand-arrows-alt"></span></li>
             </Link>
             <Link onClick={()=>alert("Hi, I am wishlist page")}>

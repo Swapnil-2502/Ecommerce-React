@@ -16,9 +16,9 @@ const ProductSection = () => {
   return (
     <div className="container">
         <div className="row">
-        {products.map((product,id)=> 
+        {products.map((product,index)=> 
             <div className="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <ProductItem key={id} title={product.title} price ={product.price} image = {product.image}/>
+                <ProductItem key={index} title={product.title} price ={product.price} image = {product.image}/>
             </div>
         )}
         </div>
